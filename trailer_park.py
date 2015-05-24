@@ -26,7 +26,7 @@ main_page_head = '''<!doctype html>
     <!-- Page Styles -->
     <style type="text/css" media="screen">
         body {
-            padding-top: 6em;
+            padding-top: 10em;
             font-family: 'Open Sans', sans-serif;
         }
         h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
@@ -128,32 +128,37 @@ main_page_content = '''
     <div class="container nav-container">
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
-          <h1>Dave&rsquo;s Trailer Park</h1>
+          <div class="row">
+            <h1 class="col-xs-12">Dave&rsquo;s Trailer Park</h1>
+          </div>
+          <div class="row">
+
+            <!-- Sorting Buttons -->
+            <div id="filters" class="filters col-sm-6">
+              <div class="filters-label">Filter by: </div>
+              <div class="btn-group">
+                <button data-filter="" class="btn btn-default">Show All</button>
+                <button data-filter="comedy" class="btn btn-primary">Comedy</button>
+                <button data-filter="action" class="btn btn-primary">Action</button>
+                <button data-filter="drama" class="btn btn-primary">Drama</button>
+                <button data-filter="sci-fi" class="btn btn-primary">Sci-Fi</button>
+                <button data-filter="western" class="btn btn-primary">Western</button> 
+              </div> 
+
+            </div>
+            <div id="sorts" class="filters col-sm-6">
+              <div class="filters-label">Sort by:</div> 
+              <div class="btn-group">
+                <button data-sort-by="title" class="btn btn-default">Title</button>
+                <button data-sort-by="year" class="btn btn-primary">Year</button>
+                <button data-sort-by="rating" class="btn btn-primary">IMDb Rating</button>
+              </div>
+            </div>
+
+          </div>
         </div>
       </div>
     </div>
-
-<!-- Sorting Buttons -->
-<div id="filters" class="filters container">
-  <div class="filters-label">Filter by: </div>
-  <div class="btn-group">
-    <button data-filter="" class="btn btn-default">Show All</button>
-    <button data-filter="comedy" class="btn btn-primary">Comedy</button>
-    <button data-filter="action" class="btn btn-primary">Action</button>
-    <button data-filter="drama" class="btn btn-primary">Drama</button>
-    <button data-filter="sci-fi" class="btn btn-primary">Sci-Fi</button>
-    <button data-filter="western" class="btn btn-primary">Western</button> 
-  </div> 
-
-</div>
-<div id="sorts" class="filters container">
-  <div class="filters-label">Sort by:</div> 
-  <div class="btn-group">
-    <button data-sort-by="title" class="btn btn-default">Title</button>
-    <button data-sort-by="year" class="btn btn-primary">Year</button>
-    <button data-sort-by="rating" class="btn btn-primary">IMDb Rating</button>
-  </div>
-</div>
 
 <!-- Main Page Content -->
     <div class="container movie-container">
@@ -285,16 +290,16 @@ def create_movie_tiles_content(movies):
     content = ''
     for movie in movies:
         # Extract the youtube ID from the url
-        youtube_id_match = re.search(r'(?<=v=)[^&#]+', movie.movie_trailer)
-        youtube_id_match = youtube_id_match or re.search(r'(?<=be/)[^&#]+', movie.movie_trailer)
-        trailer_youtube_id = youtube_id_match.group(0) if youtube_id_match else None
+        #youtube_id_match = re.search(r'(?<=v=)[^&#]+', movie.movie_trailer)
+        #youtube_id_match = youtube_id_match or re.search(r'(?<=be/)[^&#]+', movie.movie_trailer)
+        #trailer_youtube_id = youtube_id_match.group(0) if youtube_id_match else None
 
         # Append the tile for the movie with its content filled in
         content += movie_tile_content.format(
             movie_title=movie.movie_title,
             poster_image_url=movie.movie_poster,
             movie_storyline=movie.movie_plot,
-            trailer_youtube_id=trailer_youtube_id,
+            trailer_youtube_id=movie.movie_trailer,
             movie_id=movie.movie_id,
             movie_year=movie.movie_year,
             movie_genre=movie.movie_genre,
