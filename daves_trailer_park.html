@@ -19,7 +19,7 @@
     <!-- Page Styles -->
     <style type="text/css" media="screen">
         body {
-            padding-top: 6em;
+            padding-top: 10em;
             font-family: 'Open Sans', sans-serif;
         }
         h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
@@ -118,44 +118,51 @@
     <div class="container nav-container">
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
-          <h1>Dave&rsquo;s Trailer Park</h1>
+          <div class="row">
+            <h1 class="col-xs-12">Dave&rsquo;s Trailer Park</h1>
+          </div>
+          <div class="row">
+
+            <!-- Sorting Buttons -->
+            <div id="filters" class="filters col-sm-6">
+              <div class="filters-label">Filter by: </div>
+              <div class="btn-group">
+                <button data-filter="" class="btn btn-default">Show All</button>
+                <button data-filter="comedy" class="btn btn-primary">Comedy</button>
+                <button data-filter="action" class="btn btn-primary">Action</button>
+                <button data-filter="drama" class="btn btn-primary">Drama</button>
+                <button data-filter="sci-fi" class="btn btn-primary">Sci-Fi</button>
+                <button data-filter="western" class="btn btn-primary">Western</button> 
+              </div> 
+
+            </div>
+            <div id="sorts" class="filters col-sm-6">
+              <div class="filters-label">Sort by:</div> 
+              <div class="btn-group">
+                <button data-sort-by="title" class="btn btn-default">Title</button>
+                <button data-sort-by="year" class="btn btn-primary">Year</button>
+                <button data-sort-by="rating" class="btn btn-primary">IMDb Rating</button>
+              </div>
+            </div>
+
+          </div>
         </div>
       </div>
     </div>
 
-<!-- Sorting Buttons -->
-<div id="filters" class="filters container">
-  <div class="filters-label">Filter by: </div>
-  <div class="btn-group">
-    <button data-filter="" class="btn btn-default">Show All</button>
-    <button data-filter="comedy" class="btn btn-primary">Comedy</button>
-    <button data-filter="action" class="btn btn-primary">Action</button>
-    <button data-filter="drama" class="btn btn-primary">Drama</button>
-    <button data-filter="sci-fi" class="btn btn-primary">Sci-Fi</button>
-    <button data-filter="western" class="btn btn-primary">Western</button> 
-  </div> 
 
-</div>
-<div id="sorts" class="filters container">
-  <div class="filters-label">Sort by:</div> 
-  <div class="btn-group">
-    <button data-sort-by="title" class="btn btn-default">Title</button>
-    <button data-sort-by="year" class="btn btn-primary">Year</button>
-    <button data-sort-by="rating" class="btn btn-primary">IMDb Rating</button>
-  </div>
-</div>
 
 <!-- Main Page Content -->
     <div class="container movie-container">
       
       <div class="col-sm-6 col-md-4 col-lg-3 movie-tile">
-          <a class="play" href="#" data-toggle="modal" data-target="#tt0443455" data-trailer-youtube-id="uNrgu8DO7-w" title="Play trailer of Brand Upon the Brain! A Remembrance in 12 Chapters"><img src="http://ia.media-imdb.com/images/M/MV5BMTY0OTUxNjM0MV5BMl5BanBnXkFtZTcwMDU5MDQ3MQ@@._V1_SX300.jpg" height="300" alt="Play trailer of Brand Upon the Brain! A Remembrance in 12 Chapters"></a>
+          <a class="play" href="#" data-toggle="modal" data-target="#tt0443455" data-trailer-youtube-id="uNrgu8DO7-w" title="Play trailer of Brand Upon the Brain! A Remembrance in 12 Chapters"><img src="img/tt0443455.jpg" height="300" alt="Play trailer of Brand Upon the Brain! A Remembrance in 12 Chapters"></a>
           <h3 class="title">Brand Upon the Brain! A Remembrance in 12 Chapters</h3>
           <p class="text-left">Guy Maddin reluctantly returns to his childhood home, an abandoned Canadian island, where his parents ran an orphanage. As Guy fulfills his dying mother's request to paint the lighthouse ...</p>
           <p><a class="play" href="#" data-toggle="modal" data-target="#tt0443455" data-trailer-youtube-id="uNrgu8DO7-w"><i class="fa fa-play-circle"></i> Play Trailer <span class="sr-only">of Brand Upon the Brain! A Remembrance in 12 Chapters</span></a>
 
           <div class="modal fade movieinfo" id="tt0443455" tabindex="-1" role="dialog" aria-labelledby="tt0443455Label" aria-hidden="true">
-            <div class="modal modal-background" data-dismiss="modal" style="background-image:url(http://ia.media-imdb.com/images/M/MV5BMTY0OTUxNjM0MV5BMl5BanBnXkFtZTcwMDU5MDQ3MQ@@._V1_SX300.jpg)"></div>
+            <div class="modal modal-background" data-dismiss="modal" style="background-image:url(img/tt0443455.jpg)"></div>
             <div class="modal-dialog modal-lg">
               <div class="modal-content">
                 <div class="modal-header">
@@ -178,13 +185,13 @@
 
 
       <div class="col-sm-6 col-md-4 col-lg-3 movie-tile">
-          <a class="play" href="#" data-toggle="modal" data-target="#tt1182345" data-trailer-youtube-id="E-E13MP3o54" title="Play trailer of Moon"><img src="http://ia.media-imdb.com/images/M/MV5BMTgzODgyNTQwOV5BMl5BanBnXkFtZTcwNzc0NTc0Mg@@._V1_SX300.jpg" height="300" alt="Play trailer of Moon"></a>
+          <a class="play" href="#" data-toggle="modal" data-target="#tt1182345" data-trailer-youtube-id="E-E13MP3o54" title="Play trailer of Moon"><img src="img/tt1182345.jpg" height="300" alt="Play trailer of Moon"></a>
           <h3 class="title">Moon</h3>
           <p class="text-left">Astronaut Sam Bell has a quintessentially personal encounter toward the end of his three-year stint on the Moon, where he, working alongside his computer, GERTY, sends back to Earth parcels of a resource that has helped diminish our planet's power problems.</p>
           <p><a class="play" href="#" data-toggle="modal" data-target="#tt1182345" data-trailer-youtube-id="E-E13MP3o54"><i class="fa fa-play-circle"></i> Play Trailer <span class="sr-only">of Moon</span></a>
 
           <div class="modal fade movieinfo" id="tt1182345" tabindex="-1" role="dialog" aria-labelledby="tt1182345Label" aria-hidden="true">
-            <div class="modal modal-background" data-dismiss="modal" style="background-image:url(http://ia.media-imdb.com/images/M/MV5BMTgzODgyNTQwOV5BMl5BanBnXkFtZTcwNzc0NTc0Mg@@._V1_SX300.jpg)"></div>
+            <div class="modal modal-background" data-dismiss="modal" style="background-image:url(img/tt1182345.jpg)"></div>
             <div class="modal-dialog modal-lg">
               <div class="modal-content">
                 <div class="modal-header">
@@ -207,13 +214,13 @@
 
 
       <div class="col-sm-6 col-md-4 col-lg-3 movie-tile">
-          <a class="play" href="#" data-toggle="modal" data-target="#tt0076759" data-trailer-youtube-id="1g3_CFmnU7k" title="Play trailer of Star Wars: Episode IV - A New Hope"><img src="http://ia.media-imdb.com/images/M/MV5BMTU4NTczODkwM15BMl5BanBnXkFtZTcwMzEyMTIyMw@@._V1_SX300.jpg" height="300" alt="Play trailer of Star Wars: Episode IV - A New Hope"></a>
+          <a class="play" href="#" data-toggle="modal" data-target="#tt0076759" data-trailer-youtube-id="1g3_CFmnU7k" title="Play trailer of Star Wars: Episode IV - A New Hope"><img src="img/tt0076759.jpg" height="300" alt="Play trailer of Star Wars: Episode IV - A New Hope"></a>
           <h3 class="title">Star Wars: Episode IV - A New Hope</h3>
           <p class="text-left">Luke Skywalker joins forces with a Jedi Knight, a cocky pilot, a wookiee and two droids to save the universe from the Empire's world-destroying battle-station, while also attempting to rescue Princess Leia from the evil Darth Vader.</p>
           <p><a class="play" href="#" data-toggle="modal" data-target="#tt0076759" data-trailer-youtube-id="1g3_CFmnU7k"><i class="fa fa-play-circle"></i> Play Trailer <span class="sr-only">of Star Wars: Episode IV - A New Hope</span></a>
 
           <div class="modal fade movieinfo" id="tt0076759" tabindex="-1" role="dialog" aria-labelledby="tt0076759Label" aria-hidden="true">
-            <div class="modal modal-background" data-dismiss="modal" style="background-image:url(http://ia.media-imdb.com/images/M/MV5BMTU4NTczODkwM15BMl5BanBnXkFtZTcwMzEyMTIyMw@@._V1_SX300.jpg)"></div>
+            <div class="modal modal-background" data-dismiss="modal" style="background-image:url(img/tt0076759.jpg)"></div>
             <div class="modal-dialog modal-lg">
               <div class="modal-content">
                 <div class="modal-header">
@@ -236,13 +243,13 @@
 
 
       <div class="col-sm-6 col-md-4 col-lg-3 movie-tile">
-          <a class="play" href="#" data-toggle="modal" data-target="#tt0050086" data-trailer-youtube-id="AyDdnqYxhd8" title="Play trailer of 3:10 to Yuma"><img src="http://ia.media-imdb.com/images/M/MV5BMTk5MTQwNDA4N15BMl5BanBnXkFtZTcwMjk1MDQyOQ@@._V1_SX300.jpg" height="300" alt="Play trailer of 3:10 to Yuma"></a>
+          <a class="play" href="#" data-toggle="modal" data-target="#tt0050086" data-trailer-youtube-id="AyDdnqYxhd8" title="Play trailer of 3:10 to Yuma"><img src="img/tt0050086.jpg" height="300" alt="Play trailer of 3:10 to Yuma"></a>
           <h3 class="title">3:10 to Yuma</h3>
           <p class="text-left">Broke small-time rancher Dan Evans is hired by the stagecoach line to put big-time captured outlaw leader Ben Wade on the 3:10 train to Yuma but Wade's gang tries to free him.</p>
           <p><a class="play" href="#" data-toggle="modal" data-target="#tt0050086" data-trailer-youtube-id="AyDdnqYxhd8"><i class="fa fa-play-circle"></i> Play Trailer <span class="sr-only">of 3:10 to Yuma</span></a>
 
           <div class="modal fade movieinfo" id="tt0050086" tabindex="-1" role="dialog" aria-labelledby="tt0050086Label" aria-hidden="true">
-            <div class="modal modal-background" data-dismiss="modal" style="background-image:url(http://ia.media-imdb.com/images/M/MV5BMTk5MTQwNDA4N15BMl5BanBnXkFtZTcwMjk1MDQyOQ@@._V1_SX300.jpg)"></div>
+            <div class="modal modal-background" data-dismiss="modal" style="background-image:url(img/tt0050086.jpg)"></div>
             <div class="modal-dialog modal-lg">
               <div class="modal-content">
                 <div class="modal-header">
@@ -265,13 +272,13 @@
 
 
       <div class="col-sm-6 col-md-4 col-lg-3 movie-tile">
-          <a class="play" href="#" data-toggle="modal" data-target="#tt0105695" data-trailer-youtube-id="XDAXGILEdro" title="Play trailer of Unforgiven"><img src="http://ia.media-imdb.com/images/M/MV5BMTkzNTc0NDc4OF5BMl5BanBnXkFtZTcwNTY1ODg3OA@@._V1_SX300.jpg" height="300" alt="Play trailer of Unforgiven"></a>
+          <a class="play" href="#" data-toggle="modal" data-target="#tt0105695" data-trailer-youtube-id="XDAXGILEdro" title="Play trailer of Unforgiven"><img src="img/tt0105695.jpg" height="300" alt="Play trailer of Unforgiven"></a>
           <h3 class="title">Unforgiven</h3>
           <p class="text-left">Retired Old West gunslinger William Munny reluctantly takes on one last job, with the help of his old partner and a young man.</p>
           <p><a class="play" href="#" data-toggle="modal" data-target="#tt0105695" data-trailer-youtube-id="XDAXGILEdro"><i class="fa fa-play-circle"></i> Play Trailer <span class="sr-only">of Unforgiven</span></a>
 
           <div class="modal fade movieinfo" id="tt0105695" tabindex="-1" role="dialog" aria-labelledby="tt0105695Label" aria-hidden="true">
-            <div class="modal modal-background" data-dismiss="modal" style="background-image:url(http://ia.media-imdb.com/images/M/MV5BMTkzNTc0NDc4OF5BMl5BanBnXkFtZTcwNTY1ODg3OA@@._V1_SX300.jpg)"></div>
+            <div class="modal modal-background" data-dismiss="modal" style="background-image:url(img/tt0105695.jpg)"></div>
             <div class="modal-dialog modal-lg">
               <div class="modal-content">
                 <div class="modal-header">
@@ -294,13 +301,13 @@
 
 
       <div class="col-sm-6 col-md-4 col-lg-3 movie-tile">
-          <a class="play" href="#" data-toggle="modal" data-target="#tt0335266" data-trailer-youtube-id="sU0oZsqeG_s" title="Play trailer of Lost in Translation"><img src="http://ia.media-imdb.com/images/M/MV5BMTI2NDI5ODk4N15BMl5BanBnXkFtZTYwMTI3NTE3._V1_SX300.jpg" height="300" alt="Play trailer of Lost in Translation"></a>
+          <a class="play" href="#" data-toggle="modal" data-target="#tt0335266" data-trailer-youtube-id="sU0oZsqeG_s" title="Play trailer of Lost in Translation"><img src="img/tt0335266.jpg" height="300" alt="Play trailer of Lost in Translation"></a>
           <h3 class="title">Lost in Translation</h3>
           <p class="text-left">A faded movie star and a neglected young woman form an unlikely bond after crossing paths in Tokyo.</p>
           <p><a class="play" href="#" data-toggle="modal" data-target="#tt0335266" data-trailer-youtube-id="sU0oZsqeG_s"><i class="fa fa-play-circle"></i> Play Trailer <span class="sr-only">of Lost in Translation</span></a>
 
           <div class="modal fade movieinfo" id="tt0335266" tabindex="-1" role="dialog" aria-labelledby="tt0335266Label" aria-hidden="true">
-            <div class="modal modal-background" data-dismiss="modal" style="background-image:url(http://ia.media-imdb.com/images/M/MV5BMTI2NDI5ODk4N15BMl5BanBnXkFtZTYwMTI3NTE3._V1_SX300.jpg)"></div>
+            <div class="modal modal-background" data-dismiss="modal" style="background-image:url(img/tt0335266.jpg)"></div>
             <div class="modal-dialog modal-lg">
               <div class="modal-content">
                 <div class="modal-header">
@@ -323,13 +330,13 @@
 
 
       <div class="col-sm-6 col-md-4 col-lg-3 movie-tile">
-          <a class="play" href="#" data-toggle="modal" data-target="#tt0780504" data-trailer-youtube-id="CWX34ShfcsE" title="Play trailer of Drive"><img src="http://ia.media-imdb.com/images/M/MV5BOTM1ODQ0Nzc4NF5BMl5BanBnXkFtZTcwMTM0MjQyNg@@._V1_SX300.jpg" height="300" alt="Play trailer of Drive"></a>
+          <a class="play" href="#" data-toggle="modal" data-target="#tt0780504" data-trailer-youtube-id="CWX34ShfcsE" title="Play trailer of Drive"><img src="img/tt0780504.jpg" height="300" alt="Play trailer of Drive"></a>
           <h3 class="title">Drive</h3>
           <p class="text-left">A mysterious Hollywood stuntman, mechanic and getaway driver lands himself in trouble when he helps out his neighbor.</p>
           <p><a class="play" href="#" data-toggle="modal" data-target="#tt0780504" data-trailer-youtube-id="CWX34ShfcsE"><i class="fa fa-play-circle"></i> Play Trailer <span class="sr-only">of Drive</span></a>
 
           <div class="modal fade movieinfo" id="tt0780504" tabindex="-1" role="dialog" aria-labelledby="tt0780504Label" aria-hidden="true">
-            <div class="modal modal-background" data-dismiss="modal" style="background-image:url(http://ia.media-imdb.com/images/M/MV5BOTM1ODQ0Nzc4NF5BMl5BanBnXkFtZTcwMTM0MjQyNg@@._V1_SX300.jpg)"></div>
+            <div class="modal modal-background" data-dismiss="modal" style="background-image:url(img/tt0780504.jpg)"></div>
             <div class="modal-dialog modal-lg">
               <div class="modal-content">
                 <div class="modal-header">
@@ -352,13 +359,13 @@
 
 
       <div class="col-sm-6 col-md-4 col-lg-3 movie-tile">
-          <a class="play" href="#" data-toggle="modal" data-target="#tt0087469" data-trailer-youtube-id="HOwWfns4qqw" title="Play trailer of Indiana Jones and the Temple of Doom"><img src="http://ia.media-imdb.com/images/M/MV5BMTMyNzI4OTA5OV5BMl5BanBnXkFtZTcwMDQ2MjAxNA@@._V1_SX300.jpg" height="300" alt="Play trailer of Indiana Jones and the Temple of Doom"></a>
+          <a class="play" href="#" data-toggle="modal" data-target="#tt0087469" data-trailer-youtube-id="HOwWfns4qqw" title="Play trailer of Indiana Jones and the Temple of Doom"><img src="img/tt0087469.jpg" height="300" alt="Play trailer of Indiana Jones and the Temple of Doom"></a>
           <h3 class="title">Indiana Jones and the Temple of Doom</h3>
           <p class="text-left">After arriving in India, Indiana Jones is asked by a desperate village to find a mystical stone. He agrees, and stumbles upon a secret cult plotting a terrible plan in the catacombs of an ancient palace.</p>
           <p><a class="play" href="#" data-toggle="modal" data-target="#tt0087469" data-trailer-youtube-id="HOwWfns4qqw"><i class="fa fa-play-circle"></i> Play Trailer <span class="sr-only">of Indiana Jones and the Temple of Doom</span></a>
 
           <div class="modal fade movieinfo" id="tt0087469" tabindex="-1" role="dialog" aria-labelledby="tt0087469Label" aria-hidden="true">
-            <div class="modal modal-background" data-dismiss="modal" style="background-image:url(http://ia.media-imdb.com/images/M/MV5BMTMyNzI4OTA5OV5BMl5BanBnXkFtZTcwMDQ2MjAxNA@@._V1_SX300.jpg)"></div>
+            <div class="modal modal-background" data-dismiss="modal" style="background-image:url(img/tt0087469.jpg)"></div>
             <div class="modal-dialog modal-lg">
               <div class="modal-content">
                 <div class="modal-header">
@@ -381,13 +388,13 @@
 
 
       <div class="col-sm-6 col-md-4 col-lg-3 movie-tile">
-          <a class="play" href="#" data-toggle="modal" data-target="#tt0056443" data-trailer-youtube-id="ZHIRcbAMFHo" title="Play trailer of Sanjuro"><img src="http://ia.media-imdb.com/images/M/MV5BMTQ2MzYwNzUzMV5BMl5BanBnXkFtZTgwMDM3NTU3MzE@._V1_SX300.jpg" height="300" alt="Play trailer of Sanjuro"></a>
+          <a class="play" href="#" data-toggle="modal" data-target="#tt0056443" data-trailer-youtube-id="ZHIRcbAMFHo" title="Play trailer of Sanjuro"><img src="img/tt0056443.jpg" height="300" alt="Play trailer of Sanjuro"></a>
           <h3 class="title">Sanjuro</h3>
           <p class="text-left">A crafty samurai helps a young man and his fellow clansmen save his uncle, who has been framed and imprisoned by a corrupt superintendent.</p>
           <p><a class="play" href="#" data-toggle="modal" data-target="#tt0056443" data-trailer-youtube-id="ZHIRcbAMFHo"><i class="fa fa-play-circle"></i> Play Trailer <span class="sr-only">of Sanjuro</span></a>
 
           <div class="modal fade movieinfo" id="tt0056443" tabindex="-1" role="dialog" aria-labelledby="tt0056443Label" aria-hidden="true">
-            <div class="modal modal-background" data-dismiss="modal" style="background-image:url(http://ia.media-imdb.com/images/M/MV5BMTQ2MzYwNzUzMV5BMl5BanBnXkFtZTgwMDM3NTU3MzE@._V1_SX300.jpg)"></div>
+            <div class="modal modal-background" data-dismiss="modal" style="background-image:url(img/tt0056443.jpg)"></div>
             <div class="modal-dialog modal-lg">
               <div class="modal-content">
                 <div class="modal-header">
@@ -410,13 +417,13 @@
 
 
       <div class="col-sm-6 col-md-4 col-lg-3 movie-tile">
-          <a class="play" href="#" data-toggle="modal" data-target="#tt0091042" data-trailer-youtube-id="R-P6p86px6U" title="Play trailer of Ferris Bueller's Day Off"><img src="http://ia.media-imdb.com/images/M/MV5BMTg2MTUxODY4NV5BMl5BanBnXkFtZTcwNzQ5NzU2OQ@@._V1_SX300.jpg" height="300" alt="Play trailer of Ferris Bueller's Day Off"></a>
+          <a class="play" href="#" data-toggle="modal" data-target="#tt0091042" data-trailer-youtube-id="R-P6p86px6U" title="Play trailer of Ferris Bueller's Day Off"><img src="img/tt0091042.jpg" height="300" alt="Play trailer of Ferris Bueller's Day Off"></a>
           <h3 class="title">Ferris Bueller's Day Off</h3>
           <p class="text-left">A high school wise guy is determined to have a day off from school, despite what the principal thinks of that.</p>
           <p><a class="play" href="#" data-toggle="modal" data-target="#tt0091042" data-trailer-youtube-id="R-P6p86px6U"><i class="fa fa-play-circle"></i> Play Trailer <span class="sr-only">of Ferris Bueller's Day Off</span></a>
 
           <div class="modal fade movieinfo" id="tt0091042" tabindex="-1" role="dialog" aria-labelledby="tt0091042Label" aria-hidden="true">
-            <div class="modal modal-background" data-dismiss="modal" style="background-image:url(http://ia.media-imdb.com/images/M/MV5BMTg2MTUxODY4NV5BMl5BanBnXkFtZTcwNzQ5NzU2OQ@@._V1_SX300.jpg)"></div>
+            <div class="modal modal-background" data-dismiss="modal" style="background-image:url(img/tt0091042.jpg)"></div>
             <div class="modal-dialog modal-lg">
               <div class="modal-content">
                 <div class="modal-header">
@@ -439,13 +446,13 @@
 
 
       <div class="col-sm-6 col-md-4 col-lg-3 movie-tile">
-          <a class="play" href="#" data-toggle="modal" data-target="#tt0910936" data-trailer-youtube-id="_GnV2u30oOU" title="Play trailer of Pineapple Express"><img src="http://ia.media-imdb.com/images/M/MV5BMTY1MTE4NzAwM15BMl5BanBnXkFtZTcwNzg3Mjg2MQ@@._V1_SX300.jpg" height="300" alt="Play trailer of Pineapple Express"></a>
+          <a class="play" href="#" data-toggle="modal" data-target="#tt0910936" data-trailer-youtube-id="_GnV2u30oOU" title="Play trailer of Pineapple Express"><img src="img/tt0910936.jpg" height="300" alt="Play trailer of Pineapple Express"></a>
           <h3 class="title">Pineapple Express</h3>
           <p class="text-left">A process server and his marijuana dealer wind up on the run from hitmen and a corrupt police officer after he witness his dealer's boss murder a competitor while trying to serve papers on him.</p>
           <p><a class="play" href="#" data-toggle="modal" data-target="#tt0910936" data-trailer-youtube-id="_GnV2u30oOU"><i class="fa fa-play-circle"></i> Play Trailer <span class="sr-only">of Pineapple Express</span></a>
 
           <div class="modal fade movieinfo" id="tt0910936" tabindex="-1" role="dialog" aria-labelledby="tt0910936Label" aria-hidden="true">
-            <div class="modal modal-background" data-dismiss="modal" style="background-image:url(http://ia.media-imdb.com/images/M/MV5BMTY1MTE4NzAwM15BMl5BanBnXkFtZTcwNzg3Mjg2MQ@@._V1_SX300.jpg)"></div>
+            <div class="modal modal-background" data-dismiss="modal" style="background-image:url(img/tt0910936.jpg)"></div>
             <div class="modal-dialog modal-lg">
               <div class="modal-content">
                 <div class="modal-header">
@@ -468,13 +475,13 @@
 
 
       <div class="col-sm-6 col-md-4 col-lg-3 movie-tile">
-          <a class="play" href="#" data-toggle="modal" data-target="#tt0262432" data-trailer-youtube-id="shVmpGH-YxA" title="Play trailer of George Washington"><img src="http://ia.media-imdb.com/images/M/MV5BMTg3NTM2MzEzOF5BMl5BanBnXkFtZTYwMDYzNjQ5._V1_SX300.jpg" height="300" alt="Play trailer of George Washington"></a>
+          <a class="play" href="#" data-toggle="modal" data-target="#tt0262432" data-trailer-youtube-id="shVmpGH-YxA" title="Play trailer of George Washington"><img src="img/tt0262432.jpg" height="300" alt="Play trailer of George Washington"></a>
           <h3 class="title">George Washington</h3>
           <p class="text-left">A group of children, in a depressed small town, band together to cover up a tragic mistake one summer.</p>
           <p><a class="play" href="#" data-toggle="modal" data-target="#tt0262432" data-trailer-youtube-id="shVmpGH-YxA"><i class="fa fa-play-circle"></i> Play Trailer <span class="sr-only">of George Washington</span></a>
 
           <div class="modal fade movieinfo" id="tt0262432" tabindex="-1" role="dialog" aria-labelledby="tt0262432Label" aria-hidden="true">
-            <div class="modal modal-background" data-dismiss="modal" style="background-image:url(http://ia.media-imdb.com/images/M/MV5BMTg3NTM2MzEzOF5BMl5BanBnXkFtZTYwMDYzNjQ5._V1_SX300.jpg)"></div>
+            <div class="modal modal-background" data-dismiss="modal" style="background-image:url(img/tt0262432.jpg)"></div>
             <div class="modal-dialog modal-lg">
               <div class="modal-content">
                 <div class="modal-header">
@@ -497,13 +504,13 @@
 
 
       <div class="col-sm-6 col-md-4 col-lg-3 movie-tile">
-          <a class="play" href="#" data-toggle="modal" data-target="#tt0074174" data-trailer-youtube-id="sF6De-XP7x4" title="Play trailer of The Bad News Bears"><img src="http://ia.media-imdb.com/images/M/MV5BMTI3NDc1NDI4OV5BMl5BanBnXkFtZTcwMjMyNDEyMQ@@._V1_SX300.jpg" height="300" alt="Play trailer of The Bad News Bears"></a>
+          <a class="play" href="#" data-toggle="modal" data-target="#tt0074174" data-trailer-youtube-id="sF6De-XP7x4" title="Play trailer of The Bad News Bears"><img src="img/tt0074174.jpg" height="300" alt="Play trailer of The Bad News Bears"></a>
           <h3 class="title">The Bad News Bears</h3>
           <p class="text-left">An aging, down-on-his-luck ex-minor leaguer coaches a team of misfits in an ultra-competitive California little league.</p>
           <p><a class="play" href="#" data-toggle="modal" data-target="#tt0074174" data-trailer-youtube-id="sF6De-XP7x4"><i class="fa fa-play-circle"></i> Play Trailer <span class="sr-only">of The Bad News Bears</span></a>
 
           <div class="modal fade movieinfo" id="tt0074174" tabindex="-1" role="dialog" aria-labelledby="tt0074174Label" aria-hidden="true">
-            <div class="modal modal-background" data-dismiss="modal" style="background-image:url(http://ia.media-imdb.com/images/M/MV5BMTI3NDc1NDI4OV5BMl5BanBnXkFtZTcwMjMyNDEyMQ@@._V1_SX300.jpg)"></div>
+            <div class="modal modal-background" data-dismiss="modal" style="background-image:url(img/tt0074174.jpg)"></div>
             <div class="modal-dialog modal-lg">
               <div class="modal-content">
                 <div class="modal-header">
@@ -526,13 +533,13 @@
 
 
       <div class="col-sm-6 col-md-4 col-lg-3 movie-tile">
-          <a class="play" href="#" data-toggle="modal" data-target="#tt0356721" data-trailer-youtube-id="2eOLOmCjRPY" title="Play trailer of I Heart Huckabees"><img src="http://ia.media-imdb.com/images/M/MV5BNTAyNTg5NTY2OV5BMl5BanBnXkFtZTcwMzQwODYyMQ@@._V1_SX300.jpg" height="300" alt="Play trailer of I Heart Huckabees"></a>
+          <a class="play" href="#" data-toggle="modal" data-target="#tt0356721" data-trailer-youtube-id="2eOLOmCjRPY" title="Play trailer of I Heart Huckabees"><img src="img/tt0356721.jpg" height="300" alt="Play trailer of I Heart Huckabees"></a>
           <h3 class="title">I Heart Huckabees</h3>
           <p class="text-left">A husband-and-wife team play detective, but not in the traditional sense. Instead, the happy duo helps others solve their existential issues, the kind that keep you up at night, wondering what it all means.</p>
           <p><a class="play" href="#" data-toggle="modal" data-target="#tt0356721" data-trailer-youtube-id="2eOLOmCjRPY"><i class="fa fa-play-circle"></i> Play Trailer <span class="sr-only">of I Heart Huckabees</span></a>
 
           <div class="modal fade movieinfo" id="tt0356721" tabindex="-1" role="dialog" aria-labelledby="tt0356721Label" aria-hidden="true">
-            <div class="modal modal-background" data-dismiss="modal" style="background-image:url(http://ia.media-imdb.com/images/M/MV5BNTAyNTg5NTY2OV5BMl5BanBnXkFtZTcwMzQwODYyMQ@@._V1_SX300.jpg)"></div>
+            <div class="modal modal-background" data-dismiss="modal" style="background-image:url(img/tt0356721.jpg)"></div>
             <div class="modal-dialog modal-lg">
               <div class="modal-content">
                 <div class="modal-header">
@@ -555,13 +562,13 @@
 
 
       <div class="col-sm-6 col-md-4 col-lg-3 movie-tile">
-          <a class="play" href="#" data-toggle="modal" data-target="#tt0365748" data-trailer-youtube-id="yfDUv3ZjH2k" title="Play trailer of Shaun of the Dead"><img src="http://ia.media-imdb.com/images/M/MV5BMTU2NjA0NDk0NV5BMl5BanBnXkFtZTcwOTA0OTQzMw@@._V1_SX300.jpg" height="300" alt="Play trailer of Shaun of the Dead"></a>
+          <a class="play" href="#" data-toggle="modal" data-target="#tt0365748" data-trailer-youtube-id="yfDUv3ZjH2k" title="Play trailer of Shaun of the Dead"><img src="img/tt0365748.jpg" height="300" alt="Play trailer of Shaun of the Dead"></a>
           <h3 class="title">Shaun of the Dead</h3>
           <p class="text-left">A man decides to turn his moribund life around by winning back his ex-girlfriend, reconciling his relationship with his mother, and dealing with an entire community that has returned from the dead to eat the living.</p>
           <p><a class="play" href="#" data-toggle="modal" data-target="#tt0365748" data-trailer-youtube-id="yfDUv3ZjH2k"><i class="fa fa-play-circle"></i> Play Trailer <span class="sr-only">of Shaun of the Dead</span></a>
 
           <div class="modal fade movieinfo" id="tt0365748" tabindex="-1" role="dialog" aria-labelledby="tt0365748Label" aria-hidden="true">
-            <div class="modal modal-background" data-dismiss="modal" style="background-image:url(http://ia.media-imdb.com/images/M/MV5BMTU2NjA0NDk0NV5BMl5BanBnXkFtZTcwOTA0OTQzMw@@._V1_SX300.jpg)"></div>
+            <div class="modal modal-background" data-dismiss="modal" style="background-image:url(img/tt0365748.jpg)"></div>
             <div class="modal-dialog modal-lg">
               <div class="modal-content">
                 <div class="modal-header">
@@ -584,13 +591,13 @@
 
 
       <div class="col-sm-6 col-md-4 col-lg-3 movie-tile">
-          <a class="play" href="#" data-toggle="modal" data-target="#tt0393109" data-trailer-youtube-id="uM7E0XGiyrc" title="Play trailer of Brick"><img src="http://ia.media-imdb.com/images/M/MV5BMTk4MjQzMzA2N15BMl5BanBnXkFtZTcwMTU2MzIzMQ@@._V1_SX300.jpg" height="300" alt="Play trailer of Brick"></a>
+          <a class="play" href="#" data-toggle="modal" data-target="#tt0393109" data-trailer-youtube-id="uM7E0XGiyrc" title="Play trailer of Brick"><img src="img/tt0393109.jpg" height="300" alt="Play trailer of Brick"></a>
           <h3 class="title">Brick</h3>
           <p class="text-left">A teenage loner pushes his way into the underworld of a high school crime ring to investigate the disappearance of his ex-girlfriend.</p>
           <p><a class="play" href="#" data-toggle="modal" data-target="#tt0393109" data-trailer-youtube-id="uM7E0XGiyrc"><i class="fa fa-play-circle"></i> Play Trailer <span class="sr-only">of Brick</span></a>
 
           <div class="modal fade movieinfo" id="tt0393109" tabindex="-1" role="dialog" aria-labelledby="tt0393109Label" aria-hidden="true">
-            <div class="modal modal-background" data-dismiss="modal" style="background-image:url(http://ia.media-imdb.com/images/M/MV5BMTk4MjQzMzA2N15BMl5BanBnXkFtZTcwMTU2MzIzMQ@@._V1_SX300.jpg)"></div>
+            <div class="modal modal-background" data-dismiss="modal" style="background-image:url(img/tt0393109.jpg)"></div>
             <div class="modal-dialog modal-lg">
               <div class="modal-content">
                 <div class="modal-header">
@@ -613,13 +620,13 @@
 
 
       <div class="col-sm-6 col-md-4 col-lg-3 movie-tile">
-          <a class="play" href="#" data-toggle="modal" data-target="#tt0206634" data-trailer-youtube-id="Q9CFcTY_pik" title="Play trailer of Children of Men"><img src="http://ia.media-imdb.com/images/M/MV5BMTc2MDU1ODQ0MV5BMl5BanBnXkFtZTcwMjk2NDA2OQ@@._V1_SX300.jpg" height="300" alt="Play trailer of Children of Men"></a>
+          <a class="play" href="#" data-toggle="modal" data-target="#tt0206634" data-trailer-youtube-id="Q9CFcTY_pik" title="Play trailer of Children of Men"><img src="img/tt0206634.jpg" height="300" alt="Play trailer of Children of Men"></a>
           <h3 class="title">Children of Men</h3>
           <p class="text-left">In 2027, in a chaotic world in which women have become somehow infertile, a former activist agrees to help transport a miraculously pregnant woman to a sanctuary at sea.</p>
           <p><a class="play" href="#" data-toggle="modal" data-target="#tt0206634" data-trailer-youtube-id="Q9CFcTY_pik"><i class="fa fa-play-circle"></i> Play Trailer <span class="sr-only">of Children of Men</span></a>
 
           <div class="modal fade movieinfo" id="tt0206634" tabindex="-1" role="dialog" aria-labelledby="tt0206634Label" aria-hidden="true">
-            <div class="modal modal-background" data-dismiss="modal" style="background-image:url(http://ia.media-imdb.com/images/M/MV5BMTc2MDU1ODQ0MV5BMl5BanBnXkFtZTcwMjk2NDA2OQ@@._V1_SX300.jpg)"></div>
+            <div class="modal modal-background" data-dismiss="modal" style="background-image:url(img/tt0206634.jpg)"></div>
             <div class="modal-dialog modal-lg">
               <div class="modal-content">
                 <div class="modal-header">
@@ -642,13 +649,13 @@
 
 
       <div class="col-sm-6 col-md-4 col-lg-3 movie-tile">
-          <a class="play" href="#" data-toggle="modal" data-target="#tt0416320" data-trailer-youtube-id="wISRAOb6xm0" title="Play trailer of Match Point"><img src="http://ia.media-imdb.com/images/M/MV5BMTMzNzY4MzE5NF5BMl5BanBnXkFtZTcwMzQ1MDMzMQ@@._V1_SX300.jpg" height="300" alt="Play trailer of Match Point"></a>
+          <a class="play" href="#" data-toggle="modal" data-target="#tt0416320" data-trailer-youtube-id="wISRAOb6xm0" title="Play trailer of Match Point"><img src="img/tt0416320.jpg" height="300" alt="Play trailer of Match Point"></a>
           <h3 class="title">Match Point</h3>
           <p class="text-left">At a turning point in his life, a former tennis pro falls for a femme-fatal type who happens to be dating his friend and soon-to-be brother-in-law.</p>
           <p><a class="play" href="#" data-toggle="modal" data-target="#tt0416320" data-trailer-youtube-id="wISRAOb6xm0"><i class="fa fa-play-circle"></i> Play Trailer <span class="sr-only">of Match Point</span></a>
 
           <div class="modal fade movieinfo" id="tt0416320" tabindex="-1" role="dialog" aria-labelledby="tt0416320Label" aria-hidden="true">
-            <div class="modal modal-background" data-dismiss="modal" style="background-image:url(http://ia.media-imdb.com/images/M/MV5BMTMzNzY4MzE5NF5BMl5BanBnXkFtZTcwMzQ1MDMzMQ@@._V1_SX300.jpg)"></div>
+            <div class="modal modal-background" data-dismiss="modal" style="background-image:url(img/tt0416320.jpg)"></div>
             <div class="modal-dialog modal-lg">
               <div class="modal-content">
                 <div class="modal-header">
@@ -671,13 +678,13 @@
 
 
       <div class="col-sm-6 col-md-4 col-lg-3 movie-tile">
-          <a class="play" href="#" data-toggle="modal" data-target="#tt0243759" data-trailer-youtube-id="rikiGMGhKVw" title="Play trailer of The American Astronaut"><img src="http://ia.media-imdb.com/images/M/MV5BNDMzMTExOTIxOV5BMl5BanBnXkFtZTcwNTUwNzcyMQ@@._V1_SX300.jpg" height="300" alt="Play trailer of The American Astronaut"></a>
+          <a class="play" href="#" data-toggle="modal" data-target="#tt0243759" data-trailer-youtube-id="rikiGMGhKVw" title="Play trailer of The American Astronaut"><img src="img/tt0243759.jpg" height="300" alt="Play trailer of The American Astronaut"></a>
           <h3 class="title">The American Astronaut</h3>
           <p class="text-left">Samuel Curtis, an interplanetary trader, sets forth through a rustic and remote solar system, unaware that his old friend Professor Hess is trying to kill him.</p>
           <p><a class="play" href="#" data-toggle="modal" data-target="#tt0243759" data-trailer-youtube-id="rikiGMGhKVw"><i class="fa fa-play-circle"></i> Play Trailer <span class="sr-only">of The American Astronaut</span></a>
 
           <div class="modal fade movieinfo" id="tt0243759" tabindex="-1" role="dialog" aria-labelledby="tt0243759Label" aria-hidden="true">
-            <div class="modal modal-background" data-dismiss="modal" style="background-image:url(http://ia.media-imdb.com/images/M/MV5BNDMzMTExOTIxOV5BMl5BanBnXkFtZTcwNTUwNzcyMQ@@._V1_SX300.jpg)"></div>
+            <div class="modal modal-background" data-dismiss="modal" style="background-image:url(img/tt0243759.jpg)"></div>
             <div class="modal-dialog modal-lg">
               <div class="modal-content">
                 <div class="modal-header">
@@ -700,13 +707,13 @@
 
 
       <div class="col-sm-6 col-md-4 col-lg-3 movie-tile">
-          <a class="play" href="#" data-toggle="modal" data-target="#tt0050613" data-trailer-youtube-id="PoYzsDVyFRU" title="Play trailer of Throne of Blood"><img src="http://ia.media-imdb.com/images/M/MV5BMTM1MTk2NDIzOV5BMl5BanBnXkFtZTcwMTA5ODQxMQ@@._V1_SX300.jpg" height="300" alt="Play trailer of Throne of Blood"></a>
+          <a class="play" href="#" data-toggle="modal" data-target="#tt0050613" data-trailer-youtube-id="PoYzsDVyFRU" title="Play trailer of Throne of Blood"><img src="img/tt0050613.jpg" height="300" alt="Play trailer of Throne of Blood"></a>
           <h3 class="title">Throne of Blood</h3>
           <p class="text-left">A war-hardened general, egged on by his ambitious wife, works to fulfill a prophecy that he would become lord of Spider's Web Castle.</p>
           <p><a class="play" href="#" data-toggle="modal" data-target="#tt0050613" data-trailer-youtube-id="PoYzsDVyFRU"><i class="fa fa-play-circle"></i> Play Trailer <span class="sr-only">of Throne of Blood</span></a>
 
           <div class="modal fade movieinfo" id="tt0050613" tabindex="-1" role="dialog" aria-labelledby="tt0050613Label" aria-hidden="true">
-            <div class="modal modal-background" data-dismiss="modal" style="background-image:url(http://ia.media-imdb.com/images/M/MV5BMTM1MTk2NDIzOV5BMl5BanBnXkFtZTcwMTA5ODQxMQ@@._V1_SX300.jpg)"></div>
+            <div class="modal modal-background" data-dismiss="modal" style="background-image:url(img/tt0050613.jpg)"></div>
             <div class="modal-dialog modal-lg">
               <div class="modal-content">
                 <div class="modal-header">
@@ -729,13 +736,13 @@
 
 
       <div class="col-sm-6 col-md-4 col-lg-3 movie-tile">
-          <a class="play" href="#" data-toggle="modal" data-target="#tt0061747" data-trailer-youtube-id="0Eh-FOdu5ho" title="Play trailer of Hang 'Em High"><img src="http://ia.media-imdb.com/images/M/MV5BMTE5OTQ3NjM5MV5BMl5BanBnXkFtZTcwNDQ5OTEyMQ@@._V1_SX300.jpg" height="300" alt="Play trailer of Hang 'Em High"></a>
+          <a class="play" href="#" data-toggle="modal" data-target="#tt0061747" data-trailer-youtube-id="0Eh-FOdu5ho" title="Play trailer of Hang 'Em High"><img src="img/tt0061747.jpg" height="300" alt="Play trailer of Hang 'Em High"></a>
           <h3 class="title">Hang 'Em High</h3>
           <p class="text-left">When an innocent man barely survives a lynching, he returns as a lawman determined to bring the vigilantes to justice.</p>
           <p><a class="play" href="#" data-toggle="modal" data-target="#tt0061747" data-trailer-youtube-id="0Eh-FOdu5ho"><i class="fa fa-play-circle"></i> Play Trailer <span class="sr-only">of Hang 'Em High</span></a>
 
           <div class="modal fade movieinfo" id="tt0061747" tabindex="-1" role="dialog" aria-labelledby="tt0061747Label" aria-hidden="true">
-            <div class="modal modal-background" data-dismiss="modal" style="background-image:url(http://ia.media-imdb.com/images/M/MV5BMTE5OTQ3NjM5MV5BMl5BanBnXkFtZTcwNDQ5OTEyMQ@@._V1_SX300.jpg)"></div>
+            <div class="modal modal-background" data-dismiss="modal" style="background-image:url(img/tt0061747.jpg)"></div>
             <div class="modal-dialog modal-lg">
               <div class="modal-content">
                 <div class="modal-header">
@@ -758,13 +765,13 @@
 
 
       <div class="col-sm-6 col-md-4 col-lg-3 movie-tile">
-          <a class="play" href="#" data-toggle="modal" data-target="#tt0119107" data-trailer-youtube-id="jPbdwsZh38o" title="Play trailer of Fast, Cheap & Out of Control"><img src="http://ia.media-imdb.com/images/M/MV5BMjEyMTQ4OTg3NF5BMl5BanBnXkFtZTcwNzE3NDIyMQ@@._V1_SX300.jpg" height="300" alt="Play trailer of Fast, Cheap & Out of Control"></a>
+          <a class="play" href="#" data-toggle="modal" data-target="#tt0119107" data-trailer-youtube-id="jPbdwsZh38o" title="Play trailer of Fast, Cheap & Out of Control"><img src="img/tt0119107.jpg" height="300" alt="Play trailer of Fast, Cheap & Out of Control"></a>
           <h3 class="title">Fast, Cheap & Out of Control</h3>
           <p class="text-left">What do an elderly topiary gardener, a retired lion tamer, a man fascinated by mole rats, and a cutting-edge robotics designer have in common? Both nothing and everything in this ...</p>
           <p><a class="play" href="#" data-toggle="modal" data-target="#tt0119107" data-trailer-youtube-id="jPbdwsZh38o"><i class="fa fa-play-circle"></i> Play Trailer <span class="sr-only">of Fast, Cheap & Out of Control</span></a>
 
           <div class="modal fade movieinfo" id="tt0119107" tabindex="-1" role="dialog" aria-labelledby="tt0119107Label" aria-hidden="true">
-            <div class="modal modal-background" data-dismiss="modal" style="background-image:url(http://ia.media-imdb.com/images/M/MV5BMjEyMTQ4OTg3NF5BMl5BanBnXkFtZTcwNzE3NDIyMQ@@._V1_SX300.jpg)"></div>
+            <div class="modal modal-background" data-dismiss="modal" style="background-image:url(img/tt0119107.jpg)"></div>
             <div class="modal-dialog modal-lg">
               <div class="modal-content">
                 <div class="modal-header">
@@ -787,13 +794,13 @@
 
 
       <div class="col-sm-6 col-md-4 col-lg-3 movie-tile">
-          <a class="play" href="#" data-toggle="modal" data-target="#tt0070334" data-trailer-youtube-id="GeNyD9UFXHs" title="Play trailer of The Long Goodbye"><img src="http://ia.media-imdb.com/images/M/MV5BODAxMDM4NjkwN15BMl5BanBnXkFtZTcwOTczNzA2NA@@._V1_SX300.jpg" height="300" alt="Play trailer of The Long Goodbye"></a>
+          <a class="play" href="#" data-toggle="modal" data-target="#tt0070334" data-trailer-youtube-id="GeNyD9UFXHs" title="Play trailer of The Long Goodbye"><img src="img/tt0070334.jpg" height="300" alt="Play trailer of The Long Goodbye"></a>
           <h3 class="title">The Long Goodbye</h3>
           <p class="text-left">Detective Philip Marlowe tries to help a friend who is accused of murdering his wife.</p>
           <p><a class="play" href="#" data-toggle="modal" data-target="#tt0070334" data-trailer-youtube-id="GeNyD9UFXHs"><i class="fa fa-play-circle"></i> Play Trailer <span class="sr-only">of The Long Goodbye</span></a>
 
           <div class="modal fade movieinfo" id="tt0070334" tabindex="-1" role="dialog" aria-labelledby="tt0070334Label" aria-hidden="true">
-            <div class="modal modal-background" data-dismiss="modal" style="background-image:url(http://ia.media-imdb.com/images/M/MV5BODAxMDM4NjkwN15BMl5BanBnXkFtZTcwOTczNzA2NA@@._V1_SX300.jpg)"></div>
+            <div class="modal modal-background" data-dismiss="modal" style="background-image:url(img/tt0070334.jpg)"></div>
             <div class="modal-dialog modal-lg">
               <div class="modal-content">
                 <div class="modal-header">
@@ -816,13 +823,13 @@
 
 
       <div class="col-sm-6 col-md-4 col-lg-3 movie-tile">
-          <a class="play" href="#" data-toggle="modal" data-target="#tt0056869" data-trailer-youtube-id="LrN_U830_Gc" title="Play trailer of The Birds"><img src="http://ia.media-imdb.com/images/M/MV5BMTAxNDA1ODc5MDleQTJeQWpwZ15BbWU4MDg2MDA4OTEx._V1_SX300.jpg" height="300" alt="Play trailer of The Birds"></a>
+          <a class="play" href="#" data-toggle="modal" data-target="#tt0056869" data-trailer-youtube-id="LrN_U830_Gc" title="Play trailer of The Birds"><img src="img/tt0056869.jpg" height="300" alt="Play trailer of The Birds"></a>
           <h3 class="title">The Birds</h3>
           <p class="text-left">A wealthy San Francisco socialite pursues a potential boyfriend to a small Northern California town that slowly takes a turn for the bizarre when birds of all kinds suddenly begin to attack people there in increasing numbers and with increasing viciousness.</p>
           <p><a class="play" href="#" data-toggle="modal" data-target="#tt0056869" data-trailer-youtube-id="LrN_U830_Gc"><i class="fa fa-play-circle"></i> Play Trailer <span class="sr-only">of The Birds</span></a>
 
           <div class="modal fade movieinfo" id="tt0056869" tabindex="-1" role="dialog" aria-labelledby="tt0056869Label" aria-hidden="true">
-            <div class="modal modal-background" data-dismiss="modal" style="background-image:url(http://ia.media-imdb.com/images/M/MV5BMTAxNDA1ODc5MDleQTJeQWpwZ15BbWU4MDg2MDA4OTEx._V1_SX300.jpg)"></div>
+            <div class="modal modal-background" data-dismiss="modal" style="background-image:url(img/tt0056869.jpg)"></div>
             <div class="modal-dialog modal-lg">
               <div class="modal-content">
                 <div class="modal-header">
@@ -845,13 +852,13 @@
 
 
       <div class="col-sm-6 col-md-4 col-lg-3 movie-tile">
-          <a class="play" href="#" data-toggle="modal" data-target="#tt0443680" data-trailer-youtube-id="-FsN_utDELE" title="Play trailer of The Assassination of Jesse James by the Coward Robert Ford"><img src="http://ia.media-imdb.com/images/M/MV5BMTY2NDI2MTc2NV5BMl5BanBnXkFtZTcwNjA2NTQzMw@@._V1_SX300.jpg" height="300" alt="Play trailer of The Assassination of Jesse James by the Coward Robert Ford"></a>
+          <a class="play" href="#" data-toggle="modal" data-target="#tt0443680" data-trailer-youtube-id="-FsN_utDELE" title="Play trailer of The Assassination of Jesse James by the Coward Robert Ford"><img src="img/tt0443680.jpg" height="300" alt="Play trailer of The Assassination of Jesse James by the Coward Robert Ford"></a>
           <h3 class="title">The Assassination of Jesse James by the Coward Robert Ford</h3>
           <p class="text-left">Robert Ford, who's idolized Jesse James since childhood, tries hard to join the reforming gang of the Missouri outlaw, but gradually becomes resentful of the bandit leader.</p>
           <p><a class="play" href="#" data-toggle="modal" data-target="#tt0443680" data-trailer-youtube-id="-FsN_utDELE"><i class="fa fa-play-circle"></i> Play Trailer <span class="sr-only">of The Assassination of Jesse James by the Coward Robert Ford</span></a>
 
           <div class="modal fade movieinfo" id="tt0443680" tabindex="-1" role="dialog" aria-labelledby="tt0443680Label" aria-hidden="true">
-            <div class="modal modal-background" data-dismiss="modal" style="background-image:url(http://ia.media-imdb.com/images/M/MV5BMTY2NDI2MTc2NV5BMl5BanBnXkFtZTcwNjA2NTQzMw@@._V1_SX300.jpg)"></div>
+            <div class="modal modal-background" data-dismiss="modal" style="background-image:url(img/tt0443680.jpg)"></div>
             <div class="modal-dialog modal-lg">
               <div class="modal-content">
                 <div class="modal-header">
@@ -874,13 +881,13 @@
 
 
       <div class="col-sm-6 col-md-4 col-lg-3 movie-tile">
-          <a class="play" href="#" data-toggle="modal" data-target="#tt0118799" data-trailer-youtube-id="16RZHqCIy9M" title="Play trailer of Life Is Beautiful"><img src="http://ia.media-imdb.com/images/M/MV5BMTQwMTM2MjE4Ml5BMl5BanBnXkFtZTgwODQ2NTYxMTE@._V1_SX300.jpg" height="300" alt="Play trailer of Life Is Beautiful"></a>
+          <a class="play" href="#" data-toggle="modal" data-target="#tt0118799" data-trailer-youtube-id="16RZHqCIy9M" title="Play trailer of Life Is Beautiful"><img src="img/tt0118799.jpg" height="300" alt="Play trailer of Life Is Beautiful"></a>
           <h3 class="title">Life Is Beautiful</h3>
           <p class="text-left">When an open-minded Jewish librarian and his son become victims of the Holocaust, he uses a perfect mixture of will, humor and imagination to protect his son from the dangers around their camp.</p>
           <p><a class="play" href="#" data-toggle="modal" data-target="#tt0118799" data-trailer-youtube-id="16RZHqCIy9M"><i class="fa fa-play-circle"></i> Play Trailer <span class="sr-only">of Life Is Beautiful</span></a>
 
           <div class="modal fade movieinfo" id="tt0118799" tabindex="-1" role="dialog" aria-labelledby="tt0118799Label" aria-hidden="true">
-            <div class="modal modal-background" data-dismiss="modal" style="background-image:url(http://ia.media-imdb.com/images/M/MV5BMTQwMTM2MjE4Ml5BMl5BanBnXkFtZTgwODQ2NTYxMTE@._V1_SX300.jpg)"></div>
+            <div class="modal modal-background" data-dismiss="modal" style="background-image:url(img/tt0118799.jpg)"></div>
             <div class="modal-dialog modal-lg">
               <div class="modal-content">
                 <div class="modal-header">
@@ -903,13 +910,13 @@
 
 
       <div class="col-sm-6 col-md-4 col-lg-3 movie-tile">
-          <a class="play" href="#" data-toggle="modal" data-target="#tt0379217" data-trailer-youtube-id="P_7uQsP2TBk" title="Play trailer of Coffee and Cigarettes"><img src="http://ia.media-imdb.com/images/M/MV5BMTQ5NTcxODA5MV5BMl5BanBnXkFtZTcwMTEwMTYyMQ@@._V1_SX300.jpg" height="300" alt="Play trailer of Coffee and Cigarettes"></a>
+          <a class="play" href="#" data-toggle="modal" data-target="#tt0379217" data-trailer-youtube-id="P_7uQsP2TBk" title="Play trailer of Coffee and Cigarettes"><img src="img/tt0379217.jpg" height="300" alt="Play trailer of Coffee and Cigarettes"></a>
           <h3 class="title">Coffee and Cigarettes</h3>
           <p class="text-left">A series of vignettes that all have coffee and cigarettes in common.</p>
           <p><a class="play" href="#" data-toggle="modal" data-target="#tt0379217" data-trailer-youtube-id="P_7uQsP2TBk"><i class="fa fa-play-circle"></i> Play Trailer <span class="sr-only">of Coffee and Cigarettes</span></a>
 
           <div class="modal fade movieinfo" id="tt0379217" tabindex="-1" role="dialog" aria-labelledby="tt0379217Label" aria-hidden="true">
-            <div class="modal modal-background" data-dismiss="modal" style="background-image:url(http://ia.media-imdb.com/images/M/MV5BMTQ5NTcxODA5MV5BMl5BanBnXkFtZTcwMTEwMTYyMQ@@._V1_SX300.jpg)"></div>
+            <div class="modal modal-background" data-dismiss="modal" style="background-image:url(img/tt0379217.jpg)"></div>
             <div class="modal-dialog modal-lg">
               <div class="modal-content">
                 <div class="modal-header">
@@ -932,13 +939,13 @@
 
 
       <div class="col-sm-6 col-md-4 col-lg-3 movie-tile">
-          <a class="play" href="#" data-toggle="modal" data-target="#tt0038355" data-trailer-youtube-id="VjJlBnfyiI4" title="Play trailer of The Big Sleep"><img src="http://ia.media-imdb.com/images/M/MV5BNjg5MjM5MzY5M15BMl5BanBnXkFtZTgwNjg3MzgyMjE@._V1_SX300.jpg" height="300" alt="Play trailer of The Big Sleep"></a>
+          <a class="play" href="#" data-toggle="modal" data-target="#tt0038355" data-trailer-youtube-id="VjJlBnfyiI4" title="Play trailer of The Big Sleep"><img src="img/tt0038355.jpg" height="300" alt="Play trailer of The Big Sleep"></a>
           <h3 class="title">The Big Sleep</h3>
           <p class="text-left">Private detective Philip Marlowe is hired by a rich family. Before the complex case is over, he's seen murder, blackmail, and what might be love.</p>
           <p><a class="play" href="#" data-toggle="modal" data-target="#tt0038355" data-trailer-youtube-id="VjJlBnfyiI4"><i class="fa fa-play-circle"></i> Play Trailer <span class="sr-only">of The Big Sleep</span></a>
 
           <div class="modal fade movieinfo" id="tt0038355" tabindex="-1" role="dialog" aria-labelledby="tt0038355Label" aria-hidden="true">
-            <div class="modal modal-background" data-dismiss="modal" style="background-image:url(http://ia.media-imdb.com/images/M/MV5BNjg5MjM5MzY5M15BMl5BanBnXkFtZTgwNjg3MzgyMjE@._V1_SX300.jpg)"></div>
+            <div class="modal modal-background" data-dismiss="modal" style="background-image:url(img/tt0038355.jpg)"></div>
             <div class="modal-dialog modal-lg">
               <div class="modal-content">
                 <div class="modal-header">
@@ -961,13 +968,13 @@
 
 
       <div class="col-sm-6 col-md-4 col-lg-3 movie-tile">
-          <a class="play" href="#" data-toggle="modal" data-target="#tt0091167" data-trailer-youtube-id="Qtgw38Yq2Qs" title="Play trailer of Hannah and Her Sisters"><img src="http://ia.media-imdb.com/images/M/MV5BMjIwMTk0Njc4Nl5BMl5BanBnXkFtZTcwODc5MjkzNA@@._V1_SX300.jpg" height="300" alt="Play trailer of Hannah and Her Sisters"></a>
+          <a class="play" href="#" data-toggle="modal" data-target="#tt0091167" data-trailer-youtube-id="Qtgw38Yq2Qs" title="Play trailer of Hannah and Her Sisters"><img src="img/tt0091167.jpg" height="300" alt="Play trailer of Hannah and Her Sisters"></a>
           <h3 class="title">Hannah and Her Sisters</h3>
           <p class="text-left">Between two Thanksgivings, Hannah's husband falls in love with her sister Lee, while her hypochondriac ex-husband rekindles his relationship with her sister Holly.</p>
           <p><a class="play" href="#" data-toggle="modal" data-target="#tt0091167" data-trailer-youtube-id="Qtgw38Yq2Qs"><i class="fa fa-play-circle"></i> Play Trailer <span class="sr-only">of Hannah and Her Sisters</span></a>
 
           <div class="modal fade movieinfo" id="tt0091167" tabindex="-1" role="dialog" aria-labelledby="tt0091167Label" aria-hidden="true">
-            <div class="modal modal-background" data-dismiss="modal" style="background-image:url(http://ia.media-imdb.com/images/M/MV5BMjIwMTk0Njc4Nl5BMl5BanBnXkFtZTcwODc5MjkzNA@@._V1_SX300.jpg)"></div>
+            <div class="modal modal-background" data-dismiss="modal" style="background-image:url(img/tt0091167.jpg)"></div>
             <div class="modal-dialog modal-lg">
               <div class="modal-content">
                 <div class="modal-header">
@@ -990,13 +997,13 @@
 
 
       <div class="col-sm-6 col-md-4 col-lg-3 movie-tile">
-          <a class="play" href="#" data-toggle="modal" data-target="#tt0103905" data-trailer-youtube-id="bcPhaieTg4o" title="Play trailer of Man Bites Dog"><img src="http://ia.media-imdb.com/images/M/MV5BMTY3ODg2NzYxOF5BMl5BanBnXkFtZTYwOTA3NzA5._V1_SX300.jpg" height="300" alt="Play trailer of Man Bites Dog"></a>
+          <a class="play" href="#" data-toggle="modal" data-target="#tt0103905" data-trailer-youtube-id="bcPhaieTg4o" title="Play trailer of Man Bites Dog"><img src="img/tt0103905.jpg" height="300" alt="Play trailer of Man Bites Dog"></a>
           <h3 class="title">Man Bites Dog</h3>
           <p class="text-left">A film crew follows a ruthless thief and heartless killer as he goes about his daily routine. But complications set in when the film crew lose their objectivity and begin lending a hand.</p>
           <p><a class="play" href="#" data-toggle="modal" data-target="#tt0103905" data-trailer-youtube-id="bcPhaieTg4o"><i class="fa fa-play-circle"></i> Play Trailer <span class="sr-only">of Man Bites Dog</span></a>
 
           <div class="modal fade movieinfo" id="tt0103905" tabindex="-1" role="dialog" aria-labelledby="tt0103905Label" aria-hidden="true">
-            <div class="modal modal-background" data-dismiss="modal" style="background-image:url(http://ia.media-imdb.com/images/M/MV5BMTY3ODg2NzYxOF5BMl5BanBnXkFtZTYwOTA3NzA5._V1_SX300.jpg)"></div>
+            <div class="modal modal-background" data-dismiss="modal" style="background-image:url(img/tt0103905.jpg)"></div>
             <div class="modal-dialog modal-lg">
               <div class="modal-content">
                 <div class="modal-header">
@@ -1019,13 +1026,13 @@
 
 
       <div class="col-sm-6 col-md-4 col-lg-3 movie-tile">
-          <a class="play" href="#" data-toggle="modal" data-target="#tt0266697" data-trailer-youtube-id="ot6C1ZKyiME" title="Play trailer of Kill Bill: Vol. 1"><img src="http://ia.media-imdb.com/images/M/MV5BMTU1NDg1Mzg4M15BMl5BanBnXkFtZTYwMDExOTc3._V1_SX300.jpg" height="300" alt="Play trailer of Kill Bill: Vol. 1"></a>
+          <a class="play" href="#" data-toggle="modal" data-target="#tt0266697" data-trailer-youtube-id="ot6C1ZKyiME" title="Play trailer of Kill Bill: Vol. 1"><img src="img/tt0266697.jpg" height="300" alt="Play trailer of Kill Bill: Vol. 1"></a>
           <h3 class="title">Kill Bill: Vol. 1</h3>
           <p class="text-left">The Bride wakens from a four-year coma. The child she carried in her womb is gone. Now she must wreak vengeance on the team of assassins who betrayed her - a team she was once part of.</p>
           <p><a class="play" href="#" data-toggle="modal" data-target="#tt0266697" data-trailer-youtube-id="ot6C1ZKyiME"><i class="fa fa-play-circle"></i> Play Trailer <span class="sr-only">of Kill Bill: Vol. 1</span></a>
 
           <div class="modal fade movieinfo" id="tt0266697" tabindex="-1" role="dialog" aria-labelledby="tt0266697Label" aria-hidden="true">
-            <div class="modal modal-background" data-dismiss="modal" style="background-image:url(http://ia.media-imdb.com/images/M/MV5BMTU1NDg1Mzg4M15BMl5BanBnXkFtZTYwMDExOTc3._V1_SX300.jpg)"></div>
+            <div class="modal modal-background" data-dismiss="modal" style="background-image:url(img/tt0266697.jpg)"></div>
             <div class="modal-dialog modal-lg">
               <div class="modal-content">
                 <div class="modal-header">
@@ -1048,13 +1055,13 @@
 
 
       <div class="col-sm-6 col-md-4 col-lg-3 movie-tile">
-          <a class="play" href="#" data-toggle="modal" data-target="#tt0079470" data-trailer-youtube-id="tOOVm4kY4lE" title="Play trailer of Life of Brian"><img src="http://ia.media-imdb.com/images/M/MV5BMTM2NjQ4NDA0MV5BMl5BanBnXkFtZTcwMjM0Njk3OA@@._V1_SX300.jpg" height="300" alt="Play trailer of Life of Brian"></a>
+          <a class="play" href="#" data-toggle="modal" data-target="#tt0079470" data-trailer-youtube-id="tOOVm4kY4lE" title="Play trailer of Life of Brian"><img src="img/tt0079470.jpg" height="300" alt="Play trailer of Life of Brian"></a>
           <h3 class="title">Life of Brian</h3>
           <p class="text-left">Brian is born on the original Christmas, in the stable next door. He spends his life being mistaken for a messiah.</p>
           <p><a class="play" href="#" data-toggle="modal" data-target="#tt0079470" data-trailer-youtube-id="tOOVm4kY4lE"><i class="fa fa-play-circle"></i> Play Trailer <span class="sr-only">of Life of Brian</span></a>
 
           <div class="modal fade movieinfo" id="tt0079470" tabindex="-1" role="dialog" aria-labelledby="tt0079470Label" aria-hidden="true">
-            <div class="modal modal-background" data-dismiss="modal" style="background-image:url(http://ia.media-imdb.com/images/M/MV5BMTM2NjQ4NDA0MV5BMl5BanBnXkFtZTcwMjM0Njk3OA@@._V1_SX300.jpg)"></div>
+            <div class="modal modal-background" data-dismiss="modal" style="background-image:url(img/tt0079470.jpg)"></div>
             <div class="modal-dialog modal-lg">
               <div class="modal-content">
                 <div class="modal-header">
@@ -1077,13 +1084,13 @@
 
 
       <div class="col-sm-6 col-md-4 col-lg-3 movie-tile">
-          <a class="play" href="#" data-toggle="modal" data-target="#tt0068646" data-trailer-youtube-id="sY1S34973zA" title="Play trailer of The Godfather"><img src="http://ia.media-imdb.com/images/M/MV5BMjEyMjcyNDI4MF5BMl5BanBnXkFtZTcwMDA5Mzg3OA@@._V1_SX300.jpg" height="300" alt="Play trailer of The Godfather"></a>
+          <a class="play" href="#" data-toggle="modal" data-target="#tt0068646" data-trailer-youtube-id="sY1S34973zA" title="Play trailer of The Godfather"><img src="img/tt0068646.jpg" height="300" alt="Play trailer of The Godfather"></a>
           <h3 class="title">The Godfather</h3>
           <p class="text-left">The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.</p>
           <p><a class="play" href="#" data-toggle="modal" data-target="#tt0068646" data-trailer-youtube-id="sY1S34973zA"><i class="fa fa-play-circle"></i> Play Trailer <span class="sr-only">of The Godfather</span></a>
 
           <div class="modal fade movieinfo" id="tt0068646" tabindex="-1" role="dialog" aria-labelledby="tt0068646Label" aria-hidden="true">
-            <div class="modal modal-background" data-dismiss="modal" style="background-image:url(http://ia.media-imdb.com/images/M/MV5BMjEyMjcyNDI4MF5BMl5BanBnXkFtZTcwMDA5Mzg3OA@@._V1_SX300.jpg)"></div>
+            <div class="modal modal-background" data-dismiss="modal" style="background-image:url(img/tt0068646.jpg)"></div>
             <div class="modal-dialog modal-lg">
               <div class="modal-content">
                 <div class="modal-header">
@@ -1106,13 +1113,13 @@
 
 
       <div class="col-sm-6 col-md-4 col-lg-3 movie-tile">
-          <a class="play" href="#" data-toggle="modal" data-target="#tt0047478" data-trailer-youtube-id="MwvpUtc1hBU" title="Play trailer of Seven Samurai"><img src="http://ia.media-imdb.com/images/M/MV5BMTc5MDY1MjU5MF5BMl5BanBnXkFtZTgwNDM2OTE4MzE@._V1_SX300.jpg" height="300" alt="Play trailer of Seven Samurai"></a>
+          <a class="play" href="#" data-toggle="modal" data-target="#tt0047478" data-trailer-youtube-id="MwvpUtc1hBU" title="Play trailer of Seven Samurai"><img src="img/tt0047478.jpg" height="300" alt="Play trailer of Seven Samurai"></a>
           <h3 class="title">Seven Samurai</h3>
           <p class="text-left">A poor village under attack by bandits recruits seven unemployed samurai to help them defend themselves.</p>
           <p><a class="play" href="#" data-toggle="modal" data-target="#tt0047478" data-trailer-youtube-id="MwvpUtc1hBU"><i class="fa fa-play-circle"></i> Play Trailer <span class="sr-only">of Seven Samurai</span></a>
 
           <div class="modal fade movieinfo" id="tt0047478" tabindex="-1" role="dialog" aria-labelledby="tt0047478Label" aria-hidden="true">
-            <div class="modal modal-background" data-dismiss="modal" style="background-image:url(http://ia.media-imdb.com/images/M/MV5BMTc5MDY1MjU5MF5BMl5BanBnXkFtZTgwNDM2OTE4MzE@._V1_SX300.jpg)"></div>
+            <div class="modal modal-background" data-dismiss="modal" style="background-image:url(img/tt0047478.jpg)"></div>
             <div class="modal-dialog modal-lg">
               <div class="modal-content">
                 <div class="modal-header">
@@ -1135,13 +1142,13 @@
 
 
       <div class="col-sm-6 col-md-4 col-lg-3 movie-tile">
-          <a class="play" href="#" data-toggle="modal" data-target="#tt0057012" data-trailer-youtube-id="1gXY3kuDvSU" title="Play trailer of Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb"><img src="http://ia.media-imdb.com/images/M/MV5BMTU2ODM2NTkxNF5BMl5BanBnXkFtZTcwOTMwMzU3Mg@@._V1_SX300.jpg" height="300" alt="Play trailer of Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb"></a>
+          <a class="play" href="#" data-toggle="modal" data-target="#tt0057012" data-trailer-youtube-id="1gXY3kuDvSU" title="Play trailer of Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb"><img src="img/tt0057012.jpg" height="300" alt="Play trailer of Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb"></a>
           <h3 class="title">Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb</h3>
           <p class="text-left">An insane general triggers a path to nuclear holocaust that a war room full of politicians and generals frantically try to stop.</p>
           <p><a class="play" href="#" data-toggle="modal" data-target="#tt0057012" data-trailer-youtube-id="1gXY3kuDvSU"><i class="fa fa-play-circle"></i> Play Trailer <span class="sr-only">of Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb</span></a>
 
           <div class="modal fade movieinfo" id="tt0057012" tabindex="-1" role="dialog" aria-labelledby="tt0057012Label" aria-hidden="true">
-            <div class="modal modal-background" data-dismiss="modal" style="background-image:url(http://ia.media-imdb.com/images/M/MV5BMTU2ODM2NTkxNF5BMl5BanBnXkFtZTcwOTMwMzU3Mg@@._V1_SX300.jpg)"></div>
+            <div class="modal modal-background" data-dismiss="modal" style="background-image:url(img/tt0057012.jpg)"></div>
             <div class="modal-dialog modal-lg">
               <div class="modal-content">
                 <div class="modal-header">
@@ -1164,13 +1171,13 @@
 
 
       <div class="col-sm-6 col-md-4 col-lg-3 movie-tile">
-          <a class="play" href="#" data-toggle="modal" data-target="#tt0071315" data-trailer-youtube-id="3aifeXlnoqY" title="Play trailer of Chinatown"><img src="http://ia.media-imdb.com/images/M/MV5BMTUyMTQ1NjA2OV5BMl5BanBnXkFtZTcwODQ1Njg3OA@@._V1_SX300.jpg" height="300" alt="Play trailer of Chinatown"></a>
+          <a class="play" href="#" data-toggle="modal" data-target="#tt0071315" data-trailer-youtube-id="3aifeXlnoqY" title="Play trailer of Chinatown"><img src="img/tt0071315.jpg" height="300" alt="Play trailer of Chinatown"></a>
           <h3 class="title">Chinatown</h3>
           <p class="text-left">A private detective hired to expose an adulterer finds himself caught up in a web of deceit, corruption and murder.</p>
           <p><a class="play" href="#" data-toggle="modal" data-target="#tt0071315" data-trailer-youtube-id="3aifeXlnoqY"><i class="fa fa-play-circle"></i> Play Trailer <span class="sr-only">of Chinatown</span></a>
 
           <div class="modal fade movieinfo" id="tt0071315" tabindex="-1" role="dialog" aria-labelledby="tt0071315Label" aria-hidden="true">
-            <div class="modal modal-background" data-dismiss="modal" style="background-image:url(http://ia.media-imdb.com/images/M/MV5BMTUyMTQ1NjA2OV5BMl5BanBnXkFtZTcwODQ1Njg3OA@@._V1_SX300.jpg)"></div>
+            <div class="modal modal-background" data-dismiss="modal" style="background-image:url(img/tt0071315.jpg)"></div>
             <div class="modal-dialog modal-lg">
               <div class="modal-content">
                 <div class="modal-header">
