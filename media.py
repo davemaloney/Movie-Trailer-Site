@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 import urllib
 import json
-import omdbapikey
 import os.path
 
 class Movie():
@@ -10,15 +9,15 @@ class Movie():
         movie_json = urllib.urlopen("http://www.omdbapi.com/?i="+movie_id)
         movie_data = json.load(movie_json)
         movie_json.close()
+        movie_image  = movie_data["Poster"]
     #Check to see if we've got the image already
         if os.path.isfile("img/"+movie_id+".jpg"):
             self.movie_poster = "img/"+movie_id+".jpg"
         else:
-            urllib.urlretrieve("http://img.omdbapi.com/?apikey="+omdbapikey.key()+"&i="+movie_id, "img/"+movie_id+".jpg")
+            urllib.urlretrieve(movie_image, "img/"+movie_id+".jpg")
             self.movie_poster = "img/"+movie_id+".jpg"
     #Store all the info from the JSON
     	self.movie_id = movie_id
-    #    self.movie_poster  = movie_data["Poster"]
         self.movie_title = movie_data["Title"]
         self.movie_plot  = movie_data["Plot"]
         self.movie_year = movie_data["Year"]
